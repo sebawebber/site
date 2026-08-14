@@ -14,7 +14,6 @@
     { "cmd": "SELECT * FROM experience ORDER BY started DESC;", "label": "experience", "kind": "experience", "footer": "(6 rows)" },
     { "cmd": "SELECT * FROM projects;", "label": "projects", "kind": "projects", "footer": "(3 rows)" },
     { "cmd": "SELECT * FROM stack;", "label": "stack", "kind": "stack", "footer": "(4 rows)" },
-    { "cmd": "SELECT now(), status;", "label": "now()", "kind": "text", "lines": ["         now          |                        status", "----------------------+------------------------------------------------------", " 2026-08-14 09:12:03  | at PlanetScale; pager attached, mostly quiet"], "footer": "(1 row)" },
     { "cmd": "\\c contact", "label": "\\c contact", "kind": "links", "footer": "You are now connected to database \"contact\" as user \"sebastian\"." }
   ]
 }
