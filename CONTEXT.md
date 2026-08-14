@@ -21,11 +21,6 @@ stage.
 The visual, interactive home-page emulator that presents professional data
 through predefined commands and their results.
 
-## Terminal replay preference
-
-A visitor-controlled, persistent preference that determines whether the psql
-session starts its automatic command replay.
-
 ## Initial terminal dataset
 
 The professional profile values extracted from the approved home reference and
@@ -40,8 +35,3 @@ and the blog archive are introduced in a later release.
 
 The email, GitHub, and LinkedIn destinations exposed by the home and the psql
 session. They remain public in the initial release.
-
-## Reduced-motion behavior
-
-The accessibility behavior that suppresses automatic terminal replay when a
-visitor requests reduced motion, while leaving command controls available.
