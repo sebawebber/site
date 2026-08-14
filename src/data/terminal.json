@@ -8,7 +8,7 @@
     "       \\q to quit — though there is nowhere else to go"
   ],
   "steps": [
-    { "cmd": "select version();", "label": "version()", "kind": "text", "lines": ["                              version", "------------------------------------------------------------------", " PostgreSQL 8.0.26 — kept around out of respect, not necessity"], "footer": "(1 row)" },
+    { "cmd": "select * from postgres_stats();", "label": "postgres_stats()", "kind": "text", "lines": ["since: 04/2005", "postgres_version: 8.0.x"], "footer": "(1 row)" },
     { "cmd": "\\h", "label": "\\h", "kind": "text", "lines": ["Available commands:", "  \\du                        roles — who is typing this", "  SELECT * FROM experience   where twenty years went", "  SELECT * FROM projects     things that escaped localhost", "  SELECT * FROM stack        tools, honestly used", "  now()                      current status", "  \\c contact                 open a new connection"], "footer": "" },
     { "cmd": "\\du", "label": "\\du", "kind": "roles", "footer": "(2 roles)" },
     { "cmd": "SELECT * FROM experience ORDER BY started DESC;", "label": "experience", "kind": "experience", "footer": "(6 rows)" },

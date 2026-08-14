@@ -19,7 +19,7 @@ const data = { terminal, roles, experience, projects, stack, links: profile.link
       {terminal.intro.map((line) => <div>{line || <br />}</div>)}
     </div>
     <div data-results></div>
-    <div class="terminal__prompt"><span>swebber=#</span> <span data-typing></span><i aria-hidden="true"></i></div>
+    <div class="terminal__prompt"><span>seba=#</span> <span data-typing></span><i aria-hidden="true"></i></div>
   </div>
 
   <footer class="terminal__footer">
@@ -61,7 +61,7 @@ const data = { terminal, roles, experience, projects, stack, links: profile.link
   }
 
   function append(step) {
-    results.insertAdjacentHTML('beforeend', `<section class="terminal-result"><div class="terminal-result__command"><span>swebber=#</span> ${esc(step.cmd)}</div><div class="terminal-result__body">${response(step)}</div><div class="terminal-result__footer">${esc(step.footer)}</div></section>`);
+    results.insertAdjacentHTML('beforeend', `<section class="terminal-result"><div class="terminal-result__command"><span>seba=#</span> ${esc(step.cmd)}</div><div class="terminal-result__body">${response(step)}</div><div class="terminal-result__footer">${esc(step.footer)}</div></section>`);
     scroll();
   }
 
