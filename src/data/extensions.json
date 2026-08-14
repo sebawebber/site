@@ -1,0 +1,27 @@
+[
+  {
+    "name": "postgresql",
+    "attrs": "20y · production",
+    "desc": "Designs, operates and troubleshoots production Postgres: replication, high availability, PITR and performance."
+  },
+  {
+    "name": "kubernetes",
+    "attrs": "operators · lifecycle",
+    "desc": "Builds and operates database platform automation for backups, lifecycle and cross-region replication."
+  },
+  {
+    "name": "aws",
+    "attrs": "cloud · reliability",
+    "desc": "Designs dependable cloud infrastructure for managed databases and the services around them."
+  },
+  {
+    "name": "incident_response",
+    "attrs": "pager · runbooks",
+    "desc": "Investigates production failures, reduces recovery time and turns lessons into safer operations."
+  },
+  {
+    "name": "devops",
+    "attrs": "automation · delivery",
+    "desc": "Removes operational toil through CI/CD, repeatable tooling and pragmatic infrastructure automation."
+  }
+]

@@ -1,13 +1,13 @@
 ---
 import terminal from '../data/terminal.json';
-import roles from '../data/roles.json';
+import extensions from '../data/extensions.json';
 import experience from '../data/experience.json';
 import projects from '../data/projects.json';
 import stack from '../data/stack.json';
 import postgresStats from '../data/postgres-stats.json';
 import profile from '../data/profile.json';
 
-const data = { terminal, roles, experience, projects, stack, postgresStats, links: profile.links };
+const data = { terminal, extensions, experience, projects, stack, postgresStats, links: profile.links };
 ---
 
 <section class="terminal" aria-label="Interactive psql session" data-terminal>
@@ -55,7 +55,7 @@ const data = { terminal, roles, experience, projects, stack, postgresStats, link
   function response(step) {
     if (step.kind === 'text') return step.lines.map((line) => `<div>${esc(line)}</div>`).join('');
     if (step.kind === 'postgresStats') return table(['since', 'postgres_version'], data.postgresStats.map((item) => [item.since, item.postgres_version]));
-    if (step.kind === 'roles') return cards(data.roles);
+    if (step.kind === 'extensions') return cards(data.extensions);
     if (step.kind === 'experience') return table(['where', 'what', 'when'], data.experience.map((item) => [item.where, item.what, item.when]));
     if (step.kind === 'projects') return table(['name', 'what it does', 'status'], data.projects.map((item) => [item.name, item.what, item.status]));
     if (step.kind === 'stack') return table(['area', 'tools', ''], data.stack.map((item) => [item.area, item.tools, '']));

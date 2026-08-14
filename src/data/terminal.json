@@ -10,7 +10,7 @@
   ],
   "steps": [
     { "cmd": "select * from postgres_stats();", "label": "postgres_stats()", "kind": "postgresStats", "footer": "(1 row)" },
-    { "cmd": "\\du", "label": "\\du", "kind": "roles", "footer": "(2 roles)" },
+    { "cmd": "\\dx", "label": "\\dx", "kind": "extensions", "footer": "(5 extensions)" },
     { "cmd": "SELECT * FROM experience ORDER BY started DESC;", "label": "experience", "kind": "experience", "footer": "(6 rows)" },
     { "cmd": "SELECT * FROM projects;", "label": "projects", "kind": "projects", "footer": "(3 rows)" },
     { "cmd": "SELECT * FROM stack;", "label": "stack", "kind": "stack", "footer": "(4 rows)" },
