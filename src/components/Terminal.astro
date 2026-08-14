@@ -4,9 +4,10 @@ import roles from '../data/roles.json';
 import experience from '../data/experience.json';
 import projects from '../data/projects.json';
 import stack from '../data/stack.json';
+import postgresStats from '../data/postgres-stats.json';
 import profile from '../data/profile.json';
 
-const data = { terminal, roles, experience, projects, stack, links: profile.links };
+const data = { terminal, roles, experience, projects, stack, postgresStats, links: profile.links };
 ---
 
 <section class="terminal" aria-label="Interactive psql session" data-terminal>
@@ -48,11 +49,12 @@ const data = { terminal, roles, experience, projects, stack, links: profile.link
   const esc = (value) => String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
   const scroll = () => { output.scrollTop = output.scrollHeight; };
 
-  const table = (headers, rows) => `<div class="terminal-table"><div class="terminal-table__head">${headers.map(esc).map((value) => `<div>${value}</div>`).join('')}</div>${rows.map((row) => `<div class="terminal-table__row">${row.map((value, index) => `<div${index === 0 ? ' class="terminal-table__accent"' : ''}>${esc(value)}</div>`).join('')}</div>`).join('')}</div>`;
+  const table = (headers, rows) => `<div class="terminal-table terminal-table--${headers.length}"><div class="terminal-table__head">${headers.map(esc).map((value) => `<div>${value}</div>`).join('')}</div>${rows.map((row) => `<div class="terminal-table__row">${row.map((value, index) => `<div${index === 0 ? ' class="terminal-table__accent"' : ''}>${esc(value)}</div>`).join('')}</div>`).join('')}</div>`;
   const cards = (items) => `<div class="terminal-cards">${items.map((item) => `<article class="blueprint"><i class="corner corner--tl"></i><i class="corner corner--tr"></i><i class="corner corner--bl"></i><i class="corner corner--br"></i><strong>${esc(item.name)}</strong><p>${esc(item.attrs)}</p><p>${esc(item.desc)}</p></article>`).join('')}</div>`;
 
   function response(step) {
     if (step.kind === 'text') return step.lines.map((line) => `<div>${esc(line)}</div>`).join('');
+    if (step.kind === 'postgresStats') return table(['since', 'postgres_version'], data.postgresStats.map((item) => [item.since, item.postgres_version]));
     if (step.kind === 'roles') return cards(data.roles);
     if (step.kind === 'experience') return table(['where', 'what', 'when'], data.experience.map((item) => [item.where, item.what, item.when]));
     if (step.kind === 'projects') return table(['name', 'what it does', 'status'], data.projects.map((item) => [item.name, item.what, item.status]));

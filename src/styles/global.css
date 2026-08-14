@@ -47,6 +47,7 @@ h1 { margin: 0 0 20px; color: white; font: 700 min(21cqw, 96px)/.88 'Barlow Cond
 .terminal-result__body { color: color-mix(in srgb, var(--terminal-ink) 88%, transparent); }
 .terminal-result__footer { margin-top: 10px; color: color-mix(in srgb, var(--terminal-ink) 45%, transparent); }
 .terminal-table__head, .terminal-table__row { display: grid; grid-template-columns: 200px minmax(0, 1fr) 150px; gap: 20px; }
+.terminal-table--2 .terminal-table__head, .terminal-table--2 .terminal-table__row { grid-template-columns: 200px minmax(0, 1fr); }
 .terminal-table__head { padding-bottom: 6px; border-bottom: 1px solid color-mix(in srgb, var(--terminal-ink) 22%, transparent); color: color-mix(in srgb, var(--terminal-ink) 55%, transparent); }
 .terminal-table__row { padding: 9px 0; border-bottom: 1px solid color-mix(in srgb, var(--terminal-ink) 10%, transparent); }
 .terminal-table__row div:nth-child(2) { color: color-mix(in srgb, var(--terminal-ink) 88%, transparent); }
