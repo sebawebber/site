@@ -23,5 +23,10 @@
     "name": "devops",
     "attrs": "automation · delivery",
     "desc": "Removes operational toil through CI/CD, repeatable tooling and pragmatic infrastructure automation."
+  },
+  {
+    "name": "coding",
+    "attrs": "Go · Ruby · Bash · SQL",
+    "desc": "Builds practical tooling, automation and database-facing services in the languages that fit the operational problem."
   }
 ]
