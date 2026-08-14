@@ -20,7 +20,7 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
       {terminal.intro.map((line) => <div>{line || <br />}</div>)}
     </div>
     <div data-results></div>
-    <div class="terminal__prompt"><span>seba=#</span> <span data-typing></span><i aria-hidden="true"></i></div>
+    <div class="terminal__prompt" data-prompt hidden><span>seba=#</span> <span data-typing></span><i aria-hidden="true"></i></div>
   </div>
 
   <footer class="terminal__footer">
@@ -34,6 +34,7 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
   const root = document.querySelector('[data-terminal]');
   const output = root.querySelector('[data-output]');
   const results = root.querySelector('[data-results]');
+  const prompt = root.querySelector('[data-prompt]');
   const typing = root.querySelector('[data-typing]');
   const commands = root.querySelector('[data-commands]');
   const autoplay = root.querySelector('[data-autoplay]');
@@ -72,6 +73,7 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
   async function replay() {
     hasStarted = true;
     cancelled = false;
+    prompt.hidden = false;
     await wait(700);
     for (const step of data.terminal.steps) {
       if (cancelled) return;
