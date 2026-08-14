@@ -1,0 +1,6 @@
+[
+  { "area": "databases", "tools": "PostgreSQL, replication, high availability, PITR, pgBackRest, performance troubleshooting" },
+  { "area": "platform", "tools": "Kubernetes, operators, Docker, AWS, Linux, CI/CD" },
+  { "area": "code", "tools": "Go, Bash, Ruby, SQL" },
+  { "area": "practice", "tools": "Incident response, observability, disaster recovery, reducing operational toil" }
+]

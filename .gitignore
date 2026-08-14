@@ -2,5 +2,6 @@ dist/
 .publish/
 .DS_Store
 node_modules/
+.astro/
 src/static/css/*
 resources/

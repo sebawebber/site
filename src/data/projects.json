@@ -1,0 +1,5 @@
+[
+  { "name": "pgconfig", "what": "Initial Postgres tuning in a browser. Started as a page on this domain, outgrew it, moved to pgconfig.org", "status": "shipped" },
+  { "name": "swebber it services", "what": "Consulting: architecture reviews, operations, HA and replication, and the hard troubleshooting calls", "status": "open" },
+  { "name": "the blog", "what": "Years of pt-BR writing on autovacuum, pgBackRest, replication and monthly Postgres checklists", "status": "ongoing" }
+]

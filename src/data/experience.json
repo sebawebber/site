@@ -1,0 +1,8 @@
+[
+  { "where": "PlanetScale", "what": "Software engineer on a managed Postgres platform: K8s operators for backups, lifecycle and cross-region replication; incident response", "when": "2026 →" },
+  { "where": "TigerData", "what": "Senior software engineer, platform team — built and operated a managed Postgres cloud in Go, Kubernetes and AWS", "when": "2022 – 2026" },
+  { "where": "OnGres", "what": "Senior Postgres engineer on the StackGres operator: image builds, extension packaging, release automation", "when": "2020 – 2022" },
+  { "where": "CareMessage", "what": "Senior database engineer — owned Postgres operations and made the database infrastructure boring", "when": "2019 – 2020" },
+  { "where": "uMov.me", "what": "SRE — infrastructure automation, CI, deploys, and the availability of AWS services", "when": "2017 – 2019" },
+  { "where": "earlier", "what": "Postgres instructor, IT consultant, DBA and developer across Postgres, Oracle, MySQL and SQL Server", "when": "2005 – 2017" }
+]

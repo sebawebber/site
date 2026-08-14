@@ -1,0 +1,23 @@
+---
+import '@fontsource/barlow/400.css';
+import '@fontsource/barlow/700.css';
+import '@fontsource/barlow-condensed/700.css';
+import '@fontsource/ibm-plex-mono/500.css';
+import '../styles/global.css';
+
+interface Props { title?: string }
+const { title = 'Sebastian Webber — PostgreSQL & platform engineer' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sebastian Webber — PostgreSQL & platform engineer." />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

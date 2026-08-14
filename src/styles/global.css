@@ -1,0 +1,65 @@
+:root {
+  --ink: #1d1f20;
+  --paper: #f2f2f3;
+  --steel: #5980a6;
+  --steel-light: #94bce3;
+  --terminal: #1d2d3d;
+  --terminal-ink: #dfe6ee;
+  --terminal-muted: color-mix(in srgb, var(--terminal-ink) 58%, transparent);
+  font-family: 'Barlow', sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; margin: 0; }
+body { overflow: hidden; }
+a { color: inherit; }
+
+.home { display: grid; grid-template-columns: 38% 1fr; height: 100vh; height: 100svh; overflow: hidden; }
+.portrait-panel { position: relative; min-height: 0; overflow: hidden; background: var(--terminal); container-type: inline-size; color: #e6edf4; }
+.portrait-panel__image { position: absolute; inset: 0; height: 100%; width: 100%; object-fit: cover; object-position: 53% 30%; transform: scale(1.1); transform-origin: 53% 30%; filter: grayscale(1) contrast(1.12); opacity: .5; }
+.portrait-panel__duotone { position: absolute; inset: 0; background: #5980a6; mix-blend-mode: color; opacity: .5; }
+.portrait-panel__wash { position: absolute; inset: 0; background: linear-gradient(to top, var(--terminal) 4%, color-mix(in srgb, var(--terminal) 62%, transparent) 52%, color-mix(in srgb, var(--terminal) 24%, transparent)); }
+.portrait-panel__grid { position: absolute; inset: 0; background-image: linear-gradient(to right, color-mix(in srgb, #dfe6ee 8%, transparent) 1px, transparent 1px), linear-gradient(to bottom, color-mix(in srgb, #dfe6ee 8%, transparent) 1px, transparent 1px); background-size: 68px 68px; background-position: -1px -1px; }
+.portrait-panel__content { position: relative; display: flex; min-height: 100%; flex-direction: column; justify-content: space-between; gap: 22px; padding: 40px 36px; overflow-y: auto; }
+.portrait-panel__eyebrow { display: flex; align-items: baseline; gap: 14px; font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .14em; text-transform: uppercase; color: color-mix(in srgb, #e6edf4 60%, transparent); }
+.portrait-panel__eyebrow i { height: 1px; flex: 1; background: color-mix(in srgb, #dfe6ee 26%, transparent); }
+.portrait-panel__role, .portrait-panel__meta dt { margin: 0; font: 500 11px/1.4 'IBM Plex Mono', monospace; letter-spacing: .16em; text-transform: uppercase; }
+.portrait-panel__role { margin-bottom: 18px; color: var(--steel-light); }
+h1 { margin: 0 0 20px; color: white; font: 700 min(21cqw, 96px)/.88 'Barlow Condensed', sans-serif; letter-spacing: -.03em; text-transform: uppercase; }
+.portrait-panel__tagline { max-width: 32ch; margin: 0; font-size: 16px; line-height: 1.5; color: color-mix(in srgb, #e6edf4 84%, transparent); text-wrap: pretty; }
+.portrait-panel__meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 22px; margin: 0; font: 500 12px/1.5 'IBM Plex Mono', monospace; }
+.portrait-panel__meta dt { margin-bottom: 4px; font-size: 10px; color: color-mix(in srgb, #e6edf4 55%, transparent); }
+.portrait-panel__meta dd { margin: 0; }
+.portrait-panel__meta a, .terminal a { color: var(--steel-light); text-decoration: none; }
+.portrait-panel__meta a:hover, .terminal a:hover { color: white; }
+
+.terminal { display: flex; min-height: 0; flex-direction: column; overflow: hidden; border-left: 1px solid color-mix(in srgb, var(--terminal-ink) 20%, transparent); background: var(--terminal); color: var(--terminal-ink); font: 500 13.5px/1.75 'IBM Plex Mono', monospace; }
+.terminal__header, .terminal__footer { display: flex; align-items: center; gap: 20px; padding: 14px 26px; border-color: color-mix(in srgb, var(--terminal-ink) 16%, transparent); border-style: solid; font-size: 12px; }
+.terminal__header { justify-content: space-between; border-width: 0 0 1px; }
+.terminal__header nav { display: flex; gap: 18px; }
+.terminal__accent, .terminal__cursor, .terminal__prompt > span, .terminal-result__command > span, .terminal-table__accent, .blueprint strong { color: var(--steel-light); }
+.terminal__output { min-height: 0; flex: 1; overflow-y: auto; padding: 30px 26px 40px; }
+.terminal__intro { margin-bottom: 26px; color: color-mix(in srgb, var(--terminal-ink) 62%, transparent); }
+.terminal__prompt i { display: inline-block; width: 8px; height: 15px; margin-left: 2px; vertical-align: -2px; background: var(--steel-light); animation: blink 1.06s steps(1) infinite; }
+.terminal-result { margin-bottom: 30px; }
+.terminal-result__command { margin-bottom: 10px; }
+.terminal-result__body { color: color-mix(in srgb, var(--terminal-ink) 88%, transparent); }
+.terminal-result__footer { margin-top: 10px; color: color-mix(in srgb, var(--terminal-ink) 45%, transparent); }
+.terminal-table__head, .terminal-table__row { display: grid; grid-template-columns: 200px minmax(0, 1fr) 150px; gap: 20px; }
+.terminal-table__head { padding-bottom: 6px; border-bottom: 1px solid color-mix(in srgb, var(--terminal-ink) 22%, transparent); color: color-mix(in srgb, var(--terminal-ink) 55%, transparent); }
+.terminal-table__row { padding: 9px 0; border-bottom: 1px solid color-mix(in srgb, var(--terminal-ink) 10%, transparent); }
+.terminal-table__row div:nth-child(2) { color: color-mix(in srgb, var(--terminal-ink) 88%, transparent); }
+.terminal-table__row div:last-child { color: color-mix(in srgb, var(--terminal-ink) 55%, transparent); }
+.terminal-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 6px; }
+.blueprint { position: relative; padding: 18px 20px; border: 1px solid color-mix(in srgb, var(--terminal-ink) 22%, transparent); }
+.blueprint p { margin: 6px 0 0; color: color-mix(in srgb, var(--terminal-ink) 60%, transparent); font-size: 12.5px; }
+.blueprint p + p { color: color-mix(in srgb, var(--terminal-ink) 88%, transparent); }
+.corner { position: absolute; width: 7px; height: 7px; border-color: color-mix(in srgb, var(--terminal-ink) 45%, transparent); border-style: solid; }
+.corner--tl { top: -1px; left: -1px; border-width: 1px 0 0 1px; }.corner--tr { top: -1px; right: -1px; border-width: 1px 1px 0 0; }.corner--bl { bottom: -1px; left: -1px; border-width: 0 0 1px 1px; }.corner--br { right: -1px; bottom: -1px; border-width: 0 1px 1px 0; }
+.terminal-links { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }.terminal-links span { display: inline-block; width: 110px; color: color-mix(in srgb, var(--terminal-ink) 55%, transparent); }.terminal-links a { border-bottom: 1px solid color-mix(in srgb, var(--steel-light) 40%, transparent); }
+.terminal__footer { flex-wrap: wrap; border-width: 1px 0 0; gap: 8px; font-size: 11.5px; }.terminal__footer > span { margin-right: 6px; color: color-mix(in srgb, var(--terminal-ink) 45%, transparent); }.terminal__commands { display: flex; flex-wrap: wrap; gap: 8px; }.terminal button { padding: 4px 10px; border: 1px solid color-mix(in srgb, var(--terminal-ink) 24%, transparent); border-radius: 0; background: transparent; color: var(--terminal-ink); font: inherit; cursor: pointer; }.terminal button:hover { border-color: var(--steel-light); background: color-mix(in srgb, var(--steel-light) 18%, transparent); }.terminal__autoplay { display: flex; align-items: center; gap: 6px; margin-left: auto; color: color-mix(in srgb, var(--terminal-ink) 60%, transparent); }
+@keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; } }
+@media (max-width: 800px) { body { overflow: auto; }.home { display: block; height: auto; min-height: 100svh; overflow: visible; }.portrait-panel { height: max(44svh, 460px); }.portrait-panel__content { padding: 24px; }.portrait-panel__eyebrow { font-size: 9px; }.portrait-panel__meta { font-size: 11px; }.terminal { min-height: 72svh; border-left: 0; border-top: 1px solid color-mix(in srgb, var(--terminal-ink) 20%, transparent); }.terminal__header, .terminal__footer, .terminal__output { padding-left: 16px; padding-right: 16px; }.terminal__header nav { gap: 10px; }.terminal-table { overflow-x: auto; }.terminal-table__head, .terminal-table__row { min-width: 620px; }.terminal__autoplay { width: 100%; margin: 4px 0 0; } }

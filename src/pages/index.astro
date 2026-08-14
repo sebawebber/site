@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Terminal from '../components/Terminal.astro';
+import profile from '../data/profile.json';
+---
+
+<Base>
+  <main class="home">
+    <section class="portrait-panel" aria-labelledby="site-title">
+      <img class="portrait-panel__image" src="/assets/portrait.jpg" alt="Sebastian Webber" />
+      <div class="portrait-panel__duotone" aria-hidden="true"></div>
+      <div class="portrait-panel__wash"></div>
+      <div class="portrait-panel__grid" aria-hidden="true"></div>
+      <div class="portrait-panel__content">
+        <div class="portrait-panel__eyebrow"><span>swebber.me</span><i></i><span>est. 2005</span></div>
+        <div>
+          <p class="portrait-panel__role">{profile.role}</p>
+          <h1 id="site-title">Sebastian<br />Webber</h1>
+          <p class="portrait-panel__tagline">{profile.tagline}</p>
+        </div>
+        <dl class="portrait-panel__meta">
+          <div><dt>location</dt><dd>{profile.location.map((item) => <>{item}<br /></>)}</dd></div>
+          <div><dt>languages</dt><dd>{profile.languages.map((item) => <>{item}<br /></>)}</dd></div>
+          <div><dt>mail</dt><dd><a href={profile.links[0].href}>{profile.links[0].value}</a></dd></div>
+          <div><dt>elsewhere</dt><dd><a href={profile.links[2].href}>github</a> · <a href={profile.links[1].href}>linkedin</a></dd></div>
+        </dl>
+      </div>
+    </section>
+    <Terminal />
+  </main>
+</Base>
