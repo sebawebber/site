@@ -1,8 +1,12 @@
 {
   "intro": [
     "Welcome to psql 8.0.26, the PostgreSQL interactive terminal.",
-    "The first version I ran, on Windows, in 2005. It still starts.",
-    ""
+    "",
+    "Type:  \\copyright for distribution terms",
+    "       \\h for help with SQL commands",
+    "       \\? for help with psql commands",
+    "       \\g or terminate with semicolon to execute query",
+    "       \\q to quit"
   ],
   "steps": [
     { "cmd": "select * from postgres_stats();", "label": "postgres_stats()", "kind": "postgresStats", "footer": "(1 row)" },
