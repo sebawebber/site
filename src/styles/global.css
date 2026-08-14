@@ -40,7 +40,7 @@ h1 { margin: 0 0 20px; color: white; font: 700 min(21cqw, 96px)/.88 'Barlow Cond
 .terminal__header { justify-content: space-between; border-width: 0 0 1px; }
 .terminal__accent, .terminal__cursor, .terminal-table__accent, .blueprint strong { color: var(--steel-light); }
 .terminal__output { min-height: 0; flex: 1; overflow-y: auto; padding: 30px 26px 40px; }
-.terminal__intro { margin-bottom: 26px; color: color-mix(in srgb, var(--terminal-ink) 62%, transparent); }
+.terminal__intro { margin-bottom: 26px; color: color-mix(in srgb, var(--terminal-ink) 62%, transparent); white-space: pre-wrap; }
 .terminal__prompt i { display: inline-block; width: 8px; height: 15px; margin-left: 2px; vertical-align: -2px; background: var(--steel-light); animation: blink 1.06s steps(1) infinite; }
 .terminal-result { margin-bottom: 30px; }
 .terminal-result__command { margin-bottom: 10px; }
