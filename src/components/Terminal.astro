@@ -40,6 +40,7 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
   const autoplay = root.querySelector('[data-autoplay]');
   const preference = 'swebber:terminal-autoplay';
   const autoStart = false;
+  const showAllResults = true;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let cancelled = false;
   let hasStarted = false;
@@ -73,6 +74,7 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
   async function replay() {
     hasStarted = true;
     cancelled = false;
+    if (showAllResults) results.textContent = '';
     prompt.hidden = false;
     await wait(700);
     for (const step of data.terminal.steps) {
@@ -95,6 +97,11 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
     button.textContent = step.label;
     button.addEventListener('click', () => { cancelled = true; typing.textContent = ''; append(step); });
     commands.append(button);
+  }
+
+  if (showAllResults) {
+    for (const step of data.terminal.steps) append(step);
+    output.scrollTop = 0;
   }
 
   autoplay.addEventListener('change', () => {
