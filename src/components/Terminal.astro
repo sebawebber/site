@@ -38,12 +38,14 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
   const commands = root.querySelector('[data-commands]');
   const autoplay = root.querySelector('[data-autoplay]');
   const preference = 'swebber:terminal-autoplay';
+  const autoStart = false;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let cancelled = false;
   let hasStarted = false;
 
   try { autoplay.checked = localStorage.getItem(preference) !== 'off'; } catch { /* storage is optional */ }
   if (reducedMotion) autoplay.checked = false;
+  if (!autoStart) autoplay.checked = false;
 
   const wait = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
   const esc = (value) => String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
@@ -99,5 +101,5 @@ const data = { terminal, extensions, experience, projects, stack, postgresStats,
     if (autoplay.checked && !hasStarted) replay();
   });
 
-  if (autoplay.checked) replay();
+  if (autoStart && autoplay.checked) replay();
 </script>
