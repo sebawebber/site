@@ -1,8 +1,6 @@
 {
   "windowTitle": "~/swebber.me — psql",
-  "windowMeta": "psql 8.0.26",
   "intro": [
-    "~ ▞▚ psql",
     "Welcome to psql 8.0.26, the PostgreSQL interactive terminal.",
     "",
     "Type:  \\copyright for distribution terms",
