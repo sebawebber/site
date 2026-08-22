@@ -5,6 +5,6 @@
 
 # Contato comercial
 
-Precisando duma ajuda pra fazer andar aquele projeto importante? Me chama pra trocarmos uma idéia!
+Precisando duma ajuda pra fazer andar aquele projeto importante? Me chama pra trocarmos uma ideia!
 
-Contatos comerciais podem ser feitos através da timbira, no endereço [http://timbira.com.br](http://timbira.com.br) ou pelo email [sebastian@timbira.com.br](mailto:sebastian@timbira.com.br).
+Contatos comerciais podem ser feitos pelo email [hi@momoi-labs.dev](mailto:hi@momoi-labs.dev).

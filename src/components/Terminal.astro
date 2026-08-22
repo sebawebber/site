@@ -37,7 +37,7 @@ import profile from '../data/profile.json';
           {step.kind === 'experience' && (
             <div class="terminal-table">
               <div class="terminal-table__head"><div>where</div><div>what</div><div>when</div></div>
-              {experience.map((item) => <div class="terminal-table__row"><div class="terminal-table__accent">{item.where}</div><div>{item.what}</div><div>{item.when}</div></div>)}
+              {experience.map((item) => <div class="terminal-table__row"><div class="terminal-table__accent">{item.url ? <a href={item.url} target="_blank" rel="noopener noreferrer">{item.where}</a> : item.where}</div><div>{item.what}</div><div>{item.when}</div></div>)}
             </div>
           )}
           {step.kind === 'projects' && (

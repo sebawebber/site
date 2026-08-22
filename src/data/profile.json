@@ -1,12 +1,12 @@
 {
   "name": "Sebastian Webber",
   "role": "PostgreSQL & platform engineer",
-  "tagline": "Twenty years keeping production databases boring. Currently at PlanetScale, on managed Postgres, Kubernetes and the parts that page you at 03:00.",
+  "tagline": "Twenty years keeping production databases boring. Building Momoi Labs now; before that, managed Postgres and Kubernetes.",
   "location": ["Porto Alegre, BR", "UTC−3, remote"],
   "languages": ["pt-BR native", "en · es working"],
   "links": [
-    { "label": "email", "value": "hi@swebber.me", "href": "mailto:hi@swebber.me" },
+    { "label": "email", "value": "hi@momoi-labs.dev", "href": "mailto:hi@momoi-labs.dev" },
     { "label": "linkedin", "value": "linkedin.com/in/sebawebber", "href": "https://www.linkedin.com/in/sebawebber/" },
-    { "label": "github", "value": "github.com/sebastianwebber", "href": "https://github.com/sebastianwebber" }
+    { "label": "github", "value": "github.com/sebawebber", "href": "https://github.com/sebawebber" }
   ]
 }
